@@ -4,10 +4,13 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
-- main
+- azrure-pipelines
 
 pool:
-  vmImage: ubuntu-latest
+  name: LocalALLG
+  demands:
+    - Agent.Version -gtVersion 2.217.2
+  vmImage: windows-latest
 
 steps:
 - task: Maven@3
