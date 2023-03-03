@@ -8,8 +8,7 @@ trigger:
 
 pool:
   name: LocalALLG
-  demands:
-    - Agent.Version -gtVersion 2.217.2
+  
   vmImage: windows-latest
 
 steps:
